@@ -268,14 +268,26 @@ img {
 }
 
 .main-intro-img {
+    overflow: hidden;
     height: 400px;
     width: 542px;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-.main-intro-img:hover{
+.read-more:hover .main-intro-img{
     scale: 1.1;
+    transition: .3s ease-out;
+}
+.read-more{
+    height: 400px;
+    width: 542px;
+}
+.read-more:hover .img-hover{
+    background: rgba(34, 34, 34, .5);
+    color: hsla(0, 0%, 100%, .7);
+    transition: .3s ease-out;
+    opacity: 1;
 }
 
 .img-hover{
@@ -286,13 +298,5 @@ img {
     align-items: center;
     justify-content: center;
     opacity: 0;
-}
-.img-hover:hover{
-    background: rgba(34, 34, 34, .5);
-    color: hsla(0, 0%, 100%, .7);
-    transition: .3s ease-out;
-    opacity: 1;
-}
-.img-hover:hover .main-intro-img{
-    scale: 1.1;
+    cursor: pointer;
 }
